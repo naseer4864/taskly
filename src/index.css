@@ -1,13 +1,365 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(252, 252, 252);
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-container {
+  width: 100%;
+  height: 70px;
+  background-color: #004953;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: sticky;
+  top: 0%;
+  z-index: 1;
+  
+}
+
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.nav-links > .link {
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width:768px) {
+  .navbar-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    margin-right: 15px;
+  }
+
+  .logo {
+    margin-left: 15px;
+  }
+}
+
+.handle-signin-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.handle-signin-container > img {
+  width: 40%;
+  height: 200px;
+  margin-top: 20px;
+}
+
+.handle-signin-container > h1 {
+  color: rgb(6, 130, 6);
+  margin-top: 30px;
+}
+
+
+
+.sign-in-container {
+  width: 40%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sign-in-container > form {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+
+}
+
+form > input  {
+  width: 70%;
+  height: 30px;
+  padding-left: 10px;
+}
+
+form > p {
+  cursor: pointer;
+}
+.pass-container{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pass {
+  display: flex;
+  gap: 3px;
+}
+
+.pass-signup {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.sign-in-btn {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.sign-in-btn > button {
+  width: 30%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #004953;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.google-logo {
+  width: 40%;
+  height: 40px;
+  display: flex;
+  background-color:#004953;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.google-logo > img {
+  height: 20px;
+}
+
+.google-logo > button {
+  width: 90%;
+  outline: none;
+  border: none;
+  background-color: #004953;
+  color: white;
+}
+
+.btn {
+  width: 70%;
+  background-color: #004953;
+  color: white;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+@media screen  and (max-width:768px){
+  .handle-signin-container {
+    width: 100%;
+  }
+
+  .handle-signin-container > img {
+    width: 80%;
+  }
+
+  
+  .sign-in-container {
+    width: 90%;
+  }
+
+  .sign-in-container > form {
+    width: 100%;
+    
+  }
+
+  .sign-in-btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .handle-signin-container > h2{
+    font-size: 1rem;
+  }
+}
+
+.todo-mother-con {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-container {
+  max-width: 100%;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.todo-container > form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.todo-container >h2 {
+  margin-bottom: 20px;
+}
+.todo-container > form > input {
+  width: 70%;
+}
+.todo-container > form > button {
+  width: 40%;
+  height: 30px;
+  background-color: #004953;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.todo-container > ol  {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: fit-content;
+}
+
+.todo {
+  width: 100%;
+  height: fit-content;
+  
+
+}
+.todo > form {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.todo > form > input {
+  min-width: 140%;
+}
+
+.todo > form > button {
+  min-width: 75%;
+  height: 30px;
+  background-color: #004953;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.edit {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.todo-btn {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+
+.todo-btn > button {
+  width: 50%;
+  height: 40px;
+  background-color: #004953;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+}
+
+@media screen and (max-width:600px) {
+  
+
+  .todo-container > h2 {
+    font-size: 1rem;
+  }
+  .todo-container > form {
+    flex-direction: column;
+  }
+
+  .todo > form > input {
+    
+    background-color: pink;
+    min-width: 100%;
+  } 
+
+  .todo > form > button {
+    min-width: 30%;
+  }
+}
+
+.user-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.sign-out {
+  cursor: pointer;
+  background-color: #004953;
+  padding: 15px 30px;
+  color: white;
+  border-radius: 10px;
+}
+
+.reset-password {
+  margin-top: 40px;
+}
+
+.reset-password > button {
+  cursor: pointer;
+  background-color: #004953;
+  padding: 15px 30px;
+  color: white;
+  border-radius: 10px;
 }
