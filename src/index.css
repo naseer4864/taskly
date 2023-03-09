@@ -54,7 +54,7 @@ body {
 
 .handle-signin-container {
   width: 100%;
-  height: fit-content;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,7 +214,7 @@ form > p {
 }
 .todo-container {
   max-width: 100%;
-  height: fit-content;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
@@ -335,13 +335,13 @@ form > p {
 
 .user-container {
   width: 100%;
-  height: fit-content;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   gap: 30px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .sign-out {
@@ -352,9 +352,7 @@ form > p {
   border-radius: 10px;
 }
 
-.reset-password {
-  margin-top: 40px;
-}
+
 
 .reset-password > button {
   cursor: pointer;
@@ -362,4 +360,14 @@ form > p {
   padding: 15px 30px;
   color: white;
   border-radius: 10px;
+}
+
+.footer {
+  background-color: rgb(177, 177, 177);
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }

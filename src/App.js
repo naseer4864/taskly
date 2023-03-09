@@ -5,6 +5,7 @@ import Home from "./component/Home-todo.jsx";
 import SignIn from "./component/router/signIn"
 import PasswordReset from "./component/resetpassword/resetpassword";
 import UserDropDown from "./component/account/userdropdown";
+import Footer from "./component/footer";
 
 
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="userdropdown" element={<UserDropDown/>} />
         </Route>
       </Routes>
+      <Footer/>
     </div>
   );
 }
