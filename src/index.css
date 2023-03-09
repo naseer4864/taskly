@@ -371,3 +371,7 @@ form > p {
   align-items: center;
   color: white;
 }
+
+.footer > p {
+  padding: 20px;
+}
