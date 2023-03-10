@@ -9,6 +9,7 @@ const Home = () => {
     });
 
     const [inputValue, setInputValue] = useState("");
+    const [error, setErorr] = useState(false)
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify(todos));
     }, [todos]);
@@ -16,9 +17,14 @@ const Home = () => {
 
     const handleAddTodo = (e) => {
         e.preventDefault();
-        const todo = { value: inputValue, createdAt: new Date() };
-        setTodos([...todos, todo]);
-        setInputValue('');
+        if(inputValue === ""){
+            setErorr(false)
+        } else {
+            
+            const todo = { value: inputValue, createdAt: new Date() };
+            setTodos([...todos, todo]);
+            setInputValue('');
+        }
     };
 
 
@@ -47,6 +53,7 @@ const Home = () => {
                 <input type="text" placeholder="Enter your to do" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
                 <button type="submit">ADD</button>
             </form>
+            <p>{error ? "you must input your todo" : ""}</p>
             <ol>
                 {
                     todos.map((todo, index) => (

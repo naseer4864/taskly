@@ -8,6 +8,9 @@ body {
 
 }
 
+input:focus {
+  zoom: 1;
+}
 .navbar-container {
   width: 100%;
   height: 70px;
