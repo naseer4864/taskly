@@ -16,7 +16,7 @@ const Navbar = () => {
                     </Link>
                 </span>
                 <div className="nav-links">
-                    <Link to="/userdropdown" className="link">Acount</Link>
+                    <Link to="/userdropdown" className="link">account</Link>
                 </div>
             </div>
             <Outlet />
